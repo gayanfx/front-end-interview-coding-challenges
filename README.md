@@ -8,8 +8,14 @@ There is a README.md file in each question directory, read them to understand wh
 
 Once completed, push your work back to your forked repo and send your repository details to [sean.wu@cordelta.com](mailto:sean.wu@cordelta.com).
 
+Solution Demos
+
 1. Tool Tip
 # View Demo [here](https://cordeltadigital.gayan.com.au/tooltip/)
+
+
+2. Layout
+# View Demo [here](http://cordeltadigital.gayan.com.au/layout)
 
 
 3.Split text effect
