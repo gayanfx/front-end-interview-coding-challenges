@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+  </head>
+  <style>
+    :root {
+        --easing: linear;
+        --font-size: 50px;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    .header__container{
+        /* padding: 0px 5px  5px 5px ; */
+        box-sizing: border-box;
+        width: 100vw;
+        height: 85px;
+        padding: 10px;
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+
+    .header{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .header__menu{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__menu-element{
+        margin-right: 30px;
+    }
+
+    .header__log{
+        font-size: 50px;
+        font-family: Arial;
+        color: cornflowerblue;
+        font-weight: 500;
+        margin-left: 30px;
+    }
+
+    .header__logo-img{
+        height: 50px;
+    }
+
+    .center__container{
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        padding-top: 0px;
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .center__left{
+        padding: 0;
+        padding-bottom: 10px;
+        margin: 10px;
+        margin-right: 0;
+        width: 60%;
+    }
+
+    .center__right{
+        margin: 10px;
+        margin-left: 0;
+        width: 40%;
+        height: 75px    ;
+        padding: 20px;
+    }
+
+    @media (max-width: 500px) {
+        .center__container{
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .center__right, .center__left{
+            width: calc(100% - 20px);
+            box-sizing: border-box;
+        }
+
+        .center__right{
+            margin-left: 10px;
+        }
+
+        .header__logo-img {
+            height: 30px;
+        }
+
+    }
+</style>
+</head>
+<body>	
+<div class="header__container">
+    <div class="header">
+        <div class="header__log">
+            <img class="header__logo-img" src="images/logo.png">
+        </div>
+        <div class="header__menu">
+            <div class="header__menu-element">
+                <a href="">Menu 1</a>
+            </div>
+            <div class="header__menu-element">
+                <a href="">Menu 2</a>
+            </div>
+            <div class="header__menu-element">
+                <a href="">Menu 3</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center__container">
+    <div class="center__left">
+        <h1>
+            Welcome
+        </h1>
+        <div class="center__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <h2>
+            Heading 2
+        </h2>
+        <div class="center__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <h3>
+            Heading 3
+        </h3>
+        <div class="center__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
+    <div class="center__right">
+        <div>
+            Item 1
+        </div>
+        <div>
+            Item 2
+        </div>
+        <div>
+            Item 3
+        </div>
+    </div>
+</div>
+</body>
+</html>
