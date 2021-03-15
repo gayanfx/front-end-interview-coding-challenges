@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Tooltip</title>
+  </head>
+  <style>
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    }
+    .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+    .spacing {
+    line-height: 10pt;
+    }
+    .fullscreenDiv {
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    }
+    .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -50px;
+    }
+  </style>
+  <body style="text-align:center;">
+    <div class='fullscreenDiv'>
+      <div class="center">
+        <span class="tooltip">Hover me to show popup
+        <span class="tooltiptext">I'm a popup</span>
+      </div>
+    </div>
+  </body>
+</html>
