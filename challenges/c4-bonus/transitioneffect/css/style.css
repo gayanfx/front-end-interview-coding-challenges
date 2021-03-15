@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh; }
+
+.line-container {
+  overflow: hidden;
+  padding: 0rem 5rem;
+  min-height: 10vh; }
+
+.animated-text {
+  animation: appear 2s ease-in-out infinite;
+  font-weight: 900; }
+
+@keyframes appear {
+  0% {
+    transform: translateY(6rem);
+    opacity: 1; }
+  100% {
+    transform: translateY(-6rem);
+    opacity: 0; } }
