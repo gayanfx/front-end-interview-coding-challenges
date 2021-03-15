@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Split text effect</title>
+  </head>
+	<style>
+        :root {
+            --color-first: #ff0000;
+            --color-second: black;
+            --font-size: 50px;
+            --duration: 4s; /* whole animation duration */
+
+            --easing: linear;
+        }
+
+        .container {
+            width: calc(calc(var(--font-size) * 20));
+            height: var(--font-size);
+            overflow: hidden;
+            position: relative;
+
+            font-family: Arial;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .upper,
+        .lower {
+            width: 100%;
+            height: calc(var(--font-size) / 2);
+            top: 50%;
+            left: 1%;
+            position: absolute;
+            display: block;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .upper {
+            transform: translate(-25%, calc(var(--font-size) / -2));
+            animation: slideRight var(--duration) var(--easing) forwards infinite;
+        }
+
+        .lower-text,
+        .upper-text {
+            font-size: var(--font-size);
+            font-weight: 700;
+            line-height: 100%;
+            height: 100%;
+            width: 100%;
+        }
+
+        .lower-text {
+            transform: translate(75%, calc(var(--font-size) / -2));
+            animation: slideRight var(--duration) var(--easing) forwards 0.2s infinite;
+            color: var(--color-second);
+        }
+
+        .upper-text{
+            color: var(--color-first);
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translate(-100%, calc(var(--font-size) / -2));
+            }
+
+            20% {
+                transform: translate(-100%, calc(var(--font-size) / -2));
+            }
+
+            30% {
+                transform: translate(0, calc(var(--font-size) / -2));
+            }
+
+            40% {
+                transform: translate(0, calc(var(--font-size) / -2));
+            }
+
+            50% {
+                transform: translate(0, calc(var(--font-size) / -2));
+            }
+
+            60% {
+                transform: translate(0, calc(var(--font-size) / -2));
+            }
+
+            70% {
+                transform: translate(100%, calc(var(--font-size) / -2));
+            }
+
+            100% {
+                transform: translate(100%, calc(var(--font-size) / -2));
+            }
+        }
+        
+    </style>
+</head>
+<body>	
+	<div class="container">
+    <div class='fullscreenDiv'>
+      <div class="center">
+            <div class="upper lower">
+                <div class="upper-text">AWESOME ALPHA</div>
+            </div>
+            <div class="lower">
+                <div class="lower-text">AWESOME ALPHA</div>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
